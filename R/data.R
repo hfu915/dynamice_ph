@@ -57,7 +57,7 @@
 #'
 #' A dataset containing synthetic contact matrices of yearly age bands between 0
 #'  and 100 in 184 countries, including 7 countries where contact matrices were
-#' borrowed from neigbouring countries: SOM (from ETH), FSM (from FJI), TUV
+#' borrowed from neighbouring countries: SOM (from ETH), FSM (from FJI), TUV
 #' (from FJI), KIR (from FJI), MHL (from FJI), HTI (from DOM), and XK (from ALB).
 #'  Expansion of the age groups in the matrix is based on country-specific
 #' population distribution at the reference year (2020).
@@ -141,7 +141,7 @@
 #'   \item{age_to}{Age to (end-age)}
 #'   \item{year}{Year}
 #'   \item{gender}{Gender}
-#'   \item{value}{Life expectacy for the age group between age_from and age_to}
+#'   \item{value}{Life expectancy for the age group between age_from and age_to}
 #' }
 #' @source \url{https://population.un.org/wpp/Download/Standard/Population/}
 #' @source {VIMC}
@@ -150,7 +150,7 @@
 
 #' Measles CFRs based on Portnoy' method
 #'
-#' A dataset containing the case fatality ratios (CFRs) by scenario, calender
+#' A dataset containing the case fatality ratios (CFRs) by scenario, calendar
 #' year and age groups of under and over 5 years. using Portnoy estimates.
 #'
 #' @format A data table with 156240 observations of 45 variables.
@@ -158,7 +158,7 @@
 #'   \item{country_name}{Country name}
 #'   \item{country_code}{ISO3 country code}
 #'   \item{GBD Region}{GBD regions}
-#'   \item{U5MR}{Groups for under-5 mortaltiy rate, >=50 or LAC<50}
+#'   \item{U5MR}{Groups for under-5 mortality rate, >=50 or LAC<50}
 #'   \item{year}{Year}
 #'   \item{cfr_over5_scenario_s4}{CFRs for the age group over 5 years under a
 #'   specific \code{scenario}, one of the 10 VIMC coverage scenarios. The \code{s4}
@@ -166,12 +166,12 @@
 #'   \item{cfr_over5_scenario_s6}{CFRs for the age group over 5 years under a
 #'   specific \code{scenario}. The \code{s6} refers to static trend of the
 #'   2018 level in the future.}
-#'   \item{cfr_uner5_scenario_s4}{CFRs for the age group under 5 years old,
+#'   \item{cfr_under5_scenario_s4}{CFRs for the age group under 5 years old,
 #'   under a specific \code{scenario}. The \code{s4} refers to declining trend
 #'   after 2018.}
-#'   \item{cfr_uner5_scenario_s6}{CFRs for the age group under 5 years old,
-#'   under a specific \code{scenario}. The \code{s6} refers to static trend of the
-#'    2018 level in the future.}
+#'   \item{cfr_under5_scenario_s6}{CFRs for the age group under 5 years old,
+#'   under a specific \code{scenario}. The \code{s6} refers to static trend of
+#'   the 2018 level in the future.}
 #' }
 #' @source {Portnoy A, Jit M, Ferrari M, Hanson M, Brenzel L, Verguet S.
 #' Estimates of case-fatality ratios of measles in low-income and middle-income
@@ -182,7 +182,7 @@
 
 #' Measles CFRs based on Portnoy' method for 2021 WHO estimates
 #'
-#' A dataset containing the case fatality ratios (CFRs) by calender year,
+#' A dataset containing the case fatality ratios (CFRs) by calendar year,
 #' country, and age based on Portnoy's method. This version is used for the 2021
 #'  WHO estimates.
 #'

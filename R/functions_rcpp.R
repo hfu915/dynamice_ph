@@ -10,7 +10,7 @@
 #'  probabilistic sensitivity analysis (PSA).
 # ------------------------------------------------------------------------------
 #' @param iso3 ISO-3 code of the selected country.
-#' @param years A vector containing continuous calender years for simulation.
+#' @param years A vector containing continuous calendar years for simulation.
 #' @param vaccination A numeric indicator that determines vaccination programmes
 #'  for children: 0 - No vaccination, 1 - Only MCV1,  2 - MCV1 and MCV2.
 #' @param using_sia A numeric indicator that determines whether supplementary
@@ -139,7 +139,7 @@ runCountry_rcpp <- function (
   pop_out     <- array(0, c(254, n_years))
   pop0d_out   <- array(0, c(254, n_years))
   popSus_out  <- array(0, c(254, n_years))
-  dose_out    <- array(0, c(254, n_years))       # number of doses administrated
+  dose_out    <- array(0, c(254, n_years))       # number of doses administered
   reach0_out  <- array(0, c(254, n_years))       # number of zero-dose population reached
   fvp_out     <- array(0, c(254, n_years))       # number of fully vaccinated population reached
 
@@ -515,7 +515,7 @@ runScenario_rcpp <- function (vaccine_coverage_folder    = "",
 #' \dontrun{
 #' get_burden_estimate (
 #'   vaccine_coverage_folder    = "vaccine_coverage/",
-#'   vaccine_coverage_subfolder = "scenarios/"
+#'   vaccine_coverage_subfolder = "scenarios/",
 #'   scenario_name              = "campaign-only-default",
 #'   save_scenario               = scenario_number,
 #'   burden_estimate_folder     = "central_burden_estimate/",

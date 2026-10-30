@@ -71,7 +71,7 @@ create_vaccine_coverage_routine_sia <- function (vaccine_coverage_folder    = ""
                  ..keep_cols_sia]
 
   # check if national or subnational coverage >100%
-  if (nrow(sia [coverage > 1 || coverage_subnat > 1]) > 0){
+  if (nrow(sia [coverage > 1 | coverage_subnat > 1]) > 0){
     stop ("national or subnational coverage > 100%")
   }
 
@@ -163,7 +163,7 @@ expandMatrix <- function (A,
 #' Tailor the data structure for life expectancy by age and year
 #'
 #' Tailor the \code{\link{data_lexp_remain}} data to the format for processing burden
-#' estimates. Linear interpolation between calender years was applied.
+#' estimates. Linear interpolation between calendar years was applied.
 # ------------------------------------------------------------------------------
 #' @param sel_countries ISO-3 codes for countries included for evaluation. If
 #' "all", all countries in the original data are selected.

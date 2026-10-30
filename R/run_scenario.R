@@ -117,7 +117,7 @@ set_vaccination <- c (0, 1, 2, 2, 1, 2, 2, 2, 2, 1, 1, 2, 2)
 adj.covfiles <- FALSE
 if(adj.covfiles){
   # generate 2 coverage input files for routine and SIA vaccination
-  for (index in 1:length(vaccine_strategies)){
+  for (index in 1:length(vac_strategies)){
     create_vaccine_coverage_routine_sia (
       vaccine_coverage_folder    = var$vaccine_coverage_folder,
       vaccine_coverage_subfolder = var$vaccine_coverage_subfolder,
@@ -134,11 +134,11 @@ dir.create (file.path (paste0 (getwd(), "/", var$burden_estimate_folder)), recur
 # run model by different SIA methods
 for (isia in c(1,2,5)){
   if (isia == 2){
-    sel_scns <- 1:length(vaccine_strategies) # main assumption
+    sel_scns <- 1:length(vac_strategies) # main assumption
     set_sia  <- c (0, 0, 0, 2, 2, 0, 2, 3, 4, 3, 4, 3, 0)
   } else {
-    sel_scns <- c(2,3,4,5,7) # evaluate different SIA assumptions
-    set_sia [c(4,5,7,14)] <- isia
+    sel_scns <- c(4,5,7) # evaluate different SIA assumptions
+    set_sia [c(4,5,7)] <- isia
   }
 
   for (index in sel_scns){
@@ -175,7 +175,7 @@ for (isia in c(1,2,5)){
                          log_name                   = var$log_name,
                          vaccination                = set_vaccination [index],
                          using_sia                  = set_sia         [index],
-                         folder_date                = "20230401", # select the correct folder
+                         folder_date                = "20261029", # select the correct folder
                          sim_years                  = 1980:2020)
 
   }
@@ -187,7 +187,7 @@ for (isia in c(1,2,5)){
 }
 
 # analyse burden estimates under different R0
-set_sia <- c (0, 0, 0, 2, 2, 0, 2, 3, 4, 3, 4, 3, 0) # set back to the oringinal assumptions
+set_sia <- c (0, 0, 0, 2, 2, 0, 2, 3, 4, 3, 4, 3, 0) # set back to the original assumptions
 
 for (ir0 in c(seq(6,26,2))) {
   # vary R0 values
